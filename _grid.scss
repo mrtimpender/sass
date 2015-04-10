@@ -1,0 +1,46 @@
+/* Columns & Rows */
+.row{
+	width:90%;
+	max-width: 800px;
+	margin:0 auto 20px;
+	@include clearfix;
+
+	@include breakpoint($bigscreen){
+		max-width: 1500px;
+	}
+}
+
+.column{
+	float:left;
+	margin-right:2%;
+		@media (max-width: $breakpoint){
+			width:100% !important;
+			margin-right: 0;
+	}
+
+	&:last-of-type{
+		margin-right:0;
+	}
+
+	&.two-third{
+	width:65%;
+	}
+
+	&.one-half{
+	width:49%;
+	}
+
+	&.one-third{
+	width: 32%;
+	}
+
+	&.one-fourth{
+	width: 24%; /* 96%-4 */
+	}
+	
+	@include breakpoint($tablet) {
+		width:100% !important;
+		margin-right:0;
+	}
+
+}
